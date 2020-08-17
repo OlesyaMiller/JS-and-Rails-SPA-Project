@@ -1,1 +1,1 @@
-# JS-and-Rails-SPA-Final-Project
+# JS-and-Rails-SPA-Project

@@ -80,10 +80,9 @@ const addTrip = (e) => {
     fetch(TRIPS_URL, configObject)
     .then((res) => res.json())
     .then((data) => {
-        // debugger
         console.log(data)
         clearForm()
-        if (data.status !== 500) {
+        if (!data.error) {
             document.querySelector(".alert").style.display = "block"
             setTimeout(function(){ document.querySelector(".alert").style.display = "none"; }, 4000);
         } else {

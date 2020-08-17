@@ -27,7 +27,8 @@ class TripsController < ApplicationController
             trip.save 
             render json: trip.to_json(include: [:attractions, :hotels, :type, :area])
         else
-            flash.alert = "Fields cannot be empty"
+            # flash.alert = "Fields cannot be empty"
+            render json: {error: "fields cannot be empty"}
         end
     end
 
